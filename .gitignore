@@ -1,0 +1,28 @@
+*.class
+.gradle
+.project
+.settings
+.idea
+.fleet
+.kotlin
+.DS_Store
+captures
+.externalNativeBuild
+.cxx
+local.properties
+xcuserdata
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+# Eclipse/IntelliJ APT
+generated_src/
+generated_testSrc/
+generated/
+
+bin
+build

@@ -1,0 +1,104 @@
+{
+  "text": "string",
+  "generation_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "citations": [
+    {
+      "start": 0,
+      "end": 0,
+      "text": "string",
+      "document_ids": [
+        "string"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "string",
+      "additionalProp": "string"
+    }
+  ],
+  "is_search_required": true,
+  "search_queries": [
+    {
+      "text": "string",
+      "generation_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    }
+  ],
+  "search_results": [
+    {
+      "search_query": {
+        "text": "string",
+        "generation_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      },
+      "connector": {
+        "id": "string"
+      },
+      "document_ids": [
+        "string"
+      ],
+      "error_message": "string",
+      "continue_on_failure": true
+    }
+  ],
+  "finish_reason": "COMPLETE",
+  "tool_calls": [
+    {
+      "name": "string",
+      "parameters": {
+        "additionalProp": {}
+      }
+    }
+  ],
+  "chat_history": [
+    {
+      "role": "CHATBOT",
+      "message": "string",
+      "tool_calls": [
+        {
+          "name": "string",
+          "parameters": {
+            "additionalProp": {}
+          }
+        }
+      ]
+    },
+    {
+      "role": "CHATBOT",
+      "tool_results": [
+        {
+          "call": {
+            "name": "string",
+            "parameters": {
+              "additionalProp": {}
+            }
+          },
+          "outputs": [
+            {
+              "additionalProp": {}
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "api_version": {
+      "version": "string",
+      "is_deprecated": true,
+      "is_experimental": true
+    },
+    "billed_units": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "search_units": 0,
+      "classifications": 0
+    },
+    "tokens": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "warnings": [
+      "string"
+    ]
+  }
+}
