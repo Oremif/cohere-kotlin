@@ -189,7 +189,7 @@ public fun ChatRequest(
 public data class ChatRequest(
     val message: String,
     val model: String? = null,
-    val stream: Boolean? = null,
+    var stream: Boolean? = null,
     val preamble: String? = null,
     val chatHistory: List<Message>? = null,
     val conversationId: String? = null,

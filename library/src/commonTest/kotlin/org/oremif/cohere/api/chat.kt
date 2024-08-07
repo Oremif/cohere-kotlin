@@ -1,5 +1,8 @@
 package org.oremif.cohere.api
 
+import kotlinx.coroutines.test.runTest
+import org.oremif.cohere.api.types.ParameterDefinition
+import org.oremif.cohere.api.types.Tool
 import kotlin.test.Test
 
 class ChatTests {
@@ -10,15 +13,15 @@ class ChatTests {
     }
 
     @Test
-    fun `default chat request`() {
+    fun `default chat request`() = runTest {
         val response = cohere.chat("What year was he born?") {
             chatHistory(
                 listOf(
                     org.oremif.cohere.api.types.UserMessage("Who discovered gravity?"),
                     org.oremif.cohere.api.types.ChatBotMessage(
                         "The man who is widely credited" +
-                                " with discovering gravity is" +
-                                " Sir Isaac Newton"
+                            " with discovering gravity is" +
+                            " Sir Isaac Newton"
                     )
                 )
             )
@@ -28,7 +31,7 @@ class ChatTests {
     }
 
     @Test
-    fun `documents chat request`() {
+    fun `documents chat request`() = runTest {
         val response = cohere.chat("What year was he born?") {
             documents(
                 listOf(
@@ -104,15 +107,15 @@ class ChatTests {
     }
 
     @Test
-    fun `streaming chat request`() {
+    fun `streaming chat request`() = runTest {
         val response = cohere.chatStream("What year was he born?") {
             chatHistory(
                 listOf(
                     org.oremif.cohere.api.types.UserMessage("Who discovered gravity?"),
                     org.oremif.cohere.api.types.ChatBotMessage(
                         "The man who is widely credited" +
-                                " with discovering gravity is" +
-                                " Sir Isaac Newton"
+                            " with discovering gravity is" +
+                            " Sir Isaac Newton"
                     )
                 )
             )
@@ -120,12 +123,12 @@ class ChatTests {
     }
 
     @Test
-    fun `tools chat request`() {
+    fun `tools chat request`() = runTest {
         val response = cohere.chat(
             "Can you provide a sales summary for 29th September 2023,"
-                    + " and also give me some details about the products in"
-                    + " the 'Electronics' category, for example their"
-                    + " prices and stock levels?"
+                + " and also give me some details about the products in"
+                + " the 'Electronics' category, for example their"
+                + " prices and stock levels?"
         ) {
             tools(
                 listOf(

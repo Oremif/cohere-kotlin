@@ -3,6 +3,7 @@
 package org.oremif.cohere.api.types
 
 import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonClassDiscriminator
 
@@ -37,7 +38,8 @@ public sealed interface Message
  * @property message Contents of the chat message.
  * @property toolCalls
  */
-@JsonClassDiscriminator("CHATBOT")
+@Serializable
+@SerialName("CHATBOT")
 public data class ChatBotMessage(val message: String, val toolCalls: List<ToolCall>? = null) : Message
 
 
@@ -53,7 +55,8 @@ public data class ChatBotMessage(val message: String, val toolCalls: List<ToolCa
  * @property message Contents of the chat message.
  * @property toolCalls
  */
-@JsonClassDiscriminator("SYSTEM")
+@Serializable
+@SerialName("SYSTEM")
 public data class SystemMessage(val message: String, val toolCalls: List<ToolCall>? = null) : Message
 
 /**
@@ -68,7 +71,8 @@ public data class SystemMessage(val message: String, val toolCalls: List<ToolCal
  * @property message Contents of the chat message.
  * @property toolCalls
  */
-@JsonClassDiscriminator("USER")
+@Serializable
+@SerialName("USER")
 public data class UserMessage(val message: String, val toolCalls: List<ToolCall>? = null) : Message
 
 
@@ -78,5 +82,6 @@ public data class UserMessage(val message: String, val toolCalls: List<ToolCall>
  * **role** - TOOL
  * @property toolResults
  */
-@JsonClassDiscriminator("TOOL")
+@Serializable
+@SerialName("TOOL")
 public data class ToolMessage(val toolResults: List<ToolResult>? = null) : Message

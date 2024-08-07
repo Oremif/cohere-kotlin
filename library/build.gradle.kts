@@ -34,6 +34,7 @@ kotlin {
             dependencies {
                 implementation(libs.serialization.core)
                 implementation(libs.serialization.json)
+                implementation(libs.coroutines.core)
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.auth)
                 implementation(libs.ktor.client.logging)
@@ -44,6 +45,7 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(libs.kotlin.test)
+                implementation(libs.coroutines.test)
             }
         }
         val androidMain by getting {
